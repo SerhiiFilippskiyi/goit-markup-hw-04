@@ -141,7 +141,16 @@ button :focus {
   background-color: var(--title-text-color);
 }
 /*текст приимущества*/
-
+.benefits-icon.clock{
+  width: 270px;
+  height: 120px;
+  margin-left: 515px;
+  margin-bottom: 33px;
+  padding-left: 89px;
+  padding-bottom: 22px;
+  padding-top: 28px;
+  padding-right: 111px;
+}
 .post-benefits {
 }
 .benefits {
