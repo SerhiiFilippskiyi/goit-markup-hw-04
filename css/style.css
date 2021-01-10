@@ -10,13 +10,27 @@
   --primary-white-color: #ffffff;
   --secondary-background-color: #2f303a;
   --button-text-color: #212121;
+  --primary-background-color: #e5e5e5;
 }
+
 body {
-  background-color: var(--primary-white-color);
+  background-color: var(--primary-background-color);
   color: var(--primary-text-color);
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: bold;
+  width: auto;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
 }
 a {
   text-decoration: none;
@@ -29,38 +43,25 @@ li {
   padding: 0;
 }
 /*логотип, меню навигации*/
-.conteiner {
+.header {
+  background-color: var(--primary-white-color);
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  width: 1170px;
-  margin-bottom: 1px;
-  height: 80px;
-  text-align: center;
 }
 .header-logo {
   font-size: 26px;
   line-height: 31px;
   letter-spacing: 0.03em;
   text-align: center;
-  margin-top: 24px;
-  margin-right: 93px;
-}
-.header-navigation {
-  margin-top: 18px;
-}
-.head-link {
-  margin-right: 50px;
-}
-.head-mail {
-  margin-top: 18px;
-  margin-left: 331px;
-  margin-right: 50px;
-}
-.head-phone {
-  margin-top: 18px;
-}
-.nav-box {
-  display: flex;
+
+  padding-right: 93px;
 }
 .web {
   font-size: 26px;
@@ -74,13 +75,18 @@ li {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
-
-.header {
-  display: flex;
-  background-color: var(--primary-white-color);
-  height: 80px;
-  width: 1600px;
-  margin-bottom: 0pxpo;
+.header-navigation {
+  padding-top: 8px;
+}
+.head-link:not(:last-child) {
+  padding-right: 50px;
+}
+.header-contacts {
+  padding-left: 331px;
+  padding-top: 8px;
+}
+.head-phone {
+  padding-left: 50px;
 }
 .header-link {
   font-family: Roboto;
@@ -108,11 +114,12 @@ li {
 }
 /*банер и кнопка*/
 .baner {
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-color: var(--secondary-background-color);
-  width: 1600px;
-  height: 600px;
+}
+.text-baner {
   text-align: center;
-  margin-bottom: 94px;
 }
 .baner-text {
   font-family: Roboto;
@@ -121,9 +128,7 @@ li {
   font-size: 44px;
   line-height: 1.36;
   color: var(--primary-white-color);
-  margin-top: 0px;
-  margin-bottom: 30px;
-  padding-top: 200px;
+  padding-bottom: 30px;
 }
 .baner-buttons {
   width: 200px;
@@ -141,26 +146,12 @@ button :focus {
   background-color: var(--title-text-color);
 }
 /*текст приимущества*/
-.benefits-icon.clock{
-  width: 270px;
-  height: 120px;
-  margin-left: 515px;
-  margin-bottom: 33px;
-  padding-left: 89px;
-  padding-bottom: 22px;
-  padding-top: 28px;
-  padding-right: 111px;
-}
 .post-benefits {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .benefits {
-  text-align: left;
-  width: 1170px;
-  height: 101px;
-  margin-left: 215px;
-  margin-right: 215px;
-  margin-top: 0px;
-  margin-bottom: 94px;
+  text-align: center;
 }
 .post-title {
   font-family: Roboto;
@@ -169,36 +160,25 @@ button :focus {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-text-color);
-  margin-bottom: 10px;
-  margin-top: 0px;
+  padding-bottom: 10px;
 }
 .post-text {
   font-family: Roboto;
+  font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.71;
   letter-spacing: 0.03em;
-  margin-right: 30px;
-  margin-top: 0px;
 }
-.post-text-text {
-  font-family: Roboto;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  margin-top: 0px;
+.text {
+  text-align: left;
 }
-
+.text:not(:last-child) {
+  padding-right: 30px;
+}
 /*примеры рабоы*/
 .our-work {
-  width: 1170px;
-  height: 386px;
-  margin-left: 215px;
-  margin-right: 215px;
-  margin-top: 0px;
-  margin-bottom: 182px;
-  text-align: center;
+  padding-bottom: 94px;
 }
 .post-work {
   font-family: Roboto;
@@ -207,23 +187,18 @@ button :focus {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
-  margin-bottom: 50px;
-  margin-top: 0px;
+  padding-bottom: 50px;
 }
-.photo-work {
-  margin-right: 30px;
-}
-.work {
-  padding: 0px;
-  margin: 0px;
+.photo-work:not(:last-child) {
+  padding-right: 30px;
 }
 
 /*команда*/
 .our-team {
-  text-align: center;
-  width: 1600px;
-  height: 648px;
+  background: #f5f4fa;
   margin-bottom: 6px;
+  padding-bottom: 88px;
+  padding-top: 94px;
 }
 .post-team {
   font-family: Roboto;
@@ -232,27 +207,19 @@ button :focus {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
-  margin-bottom: 50px;
-  margin-top: 0px;
-}
-.photo-team {
-  padding: 0px;
-  margin: 0px;
+  padding-bottom: 50px;
 }
 .team-photo {
-  width: 1170px;
-  margin-left: 215px;
-  margin-right: 215px;
-  padding: 0px;
+  justify-content: center;
 }
 .team {
-  width: 270px;
-  height: 368px;
   background: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   text-align: center;
+}
+.team:not(:last-child) {
   margin-right: 30px;
 }
 .name {
@@ -262,7 +229,8 @@ button :focus {
   line-height: 19px;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
-  margin-bottom: 10px;
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 .position {
   font-family: Roboto;
@@ -270,25 +238,27 @@ button :focus {
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.03em;
+  padding-bottom: 30px;
 }
 
 /*футер навигация*/
 
 .footer {
-  box-sizing: border-box;
-  width: 1600px;
-  height: 252px;
   background: var(--secondary-background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
-.logo-footer{
-  margin-left: 215px;
-  padding-top:  60px;
-  margin-bottom: 20px;
+.footer-logo {
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-align: center;
+  padding-bottom: 20px;
 }
 .footerstudio {
   font-family: Raleway;
   font-size: 26px;
-  line-height: 31px;
+  line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--primary-white-color);
 }
@@ -299,12 +269,9 @@ button :focus {
   font-size: 14px;
   line-height: 1.71;
   color: var(--primary-white-color);
-} 
-.adres-map{
-  margin-left: 215px;
-  margin-bottom: 9px;
-  margin-top: 0px;
+  padding-bottom: 9px;
 }
+
 .footer-contacts {
   font-family: Roboto;
   font-style: normal;
@@ -313,9 +280,9 @@ button :focus {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
-  margin-left: 107px;
-  margin-top: 0px;
-  margin-bottom: 9px;
+}
+.footer-contacts:not(:last-child) {
+  padding-bottom: 9px;
 }
 address :focus,
 address :hover {
@@ -323,48 +290,27 @@ address :hover {
 }
 
 /*страница портфолио*/
-
+.portfolio-container {
+  background-color: var(--primary-white-color);
+  padding-bottom: 64px;
+  padding-top: 94px;
+}
 .buttons-section :hover,
 .buttons-section :focus {
   color: var(--primary-white-color);
   background-color: var(--accent-text-color);
 }
-.name-project {
-  font-family: Roboto;
-  font-size: 18px;
-  line-height: 36px;
-  letter-spacing: 0.06em;
-  color: var(--title-text-color);
-  text-align: left;
-}
-.tipe-project {
-  font-family: Roboto;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.03em;
-  text-align: left;
-}
-.portfolio-container{
-  width: 1170px;
-  height: 1360px;
-  margin-left: 215px;
-}
-.buttons-container{
+.buttons-container {
   display: flex;
-  width: 611px;
-  height: 54px;
-  margin-left: 280px;
-  padding: 0px;
   justify-content: center;
+  padding-bottom: 34px;
 }
-.buttons{
+.buttons {
   display: inline-block;
   padding: 6px 22px;
   width: max-content;
   height: 38px;
   border-radius: 4px;
-  margin-right: 8px;
   font-family: Roboto;
   font-weight: 500;
   font-size: 16px;
@@ -376,8 +322,39 @@ address :hover {
   border-color: var(--primary-white-color);
   border-width: 0px;
 }
-.portfolio{
-  text-align: center;
-  justify-content: center;
+.buttons-section:not(:last-child) {
+  padding-right: 8px;
 }
-
+.name-project {
+  font-family: Roboto;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 0.06em;
+  color: var(--title-text-color);
+  text-align: left;
+  padding-bottom: 4px;
+}
+.tipe-project {
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+.project-one:not(:last-child),
+.project-two:not(:last-child),
+.project-thre:not(:last-child) {
+  padding-right: 30px;
+}
+.project-one,
+.project-two,
+.project-thre {
+  padding-bottom: 30px;
+}
+.project-diskription {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+  box-sizing: border-box;
+}
