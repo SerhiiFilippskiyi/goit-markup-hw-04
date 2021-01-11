@@ -104,6 +104,10 @@ li {
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
 }
+.contact-icon {
+  margin-right: 20px;
+  color: #757575;
+}
 .header-contacts :hover,
 .header-contacts :focus {
   color: var(--accent-text-color);
@@ -117,8 +121,14 @@ li {
   padding-top: 200px;
   padding-bottom: 200px;
   background: var(--secondary-background-color);
-  background: url('background.jpg') no-repeat;
-  background-size: 1600px 600px;
+  max-width: 1600px;
+  max-height: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) ), url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  outline: 1px solid teal;
 }
   
 .text-baner {
