@@ -116,10 +116,13 @@ li {
 .baner {
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: var(--secondary-background-color);
+  background: var(--secondary-background-color);
+  background: url('background.jpg') no-repeat;
+  background-size: 1600px 600px;
 }
+  
 .text-baner {
-  text-align: center;
+ text-align: center;
 }
 .baner-text {
   font-family: Roboto;
