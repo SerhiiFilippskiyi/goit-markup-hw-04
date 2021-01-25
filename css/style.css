@@ -105,8 +105,12 @@ li {
   color: var(--primary-text-color);
 }
 .contact-icon {
-  margin-right: 20px;
-  color: #757575;
+  margin-right: 10px;
+  fill: currentColor;
+}
+.contact-icon :hover,
+.contact-icon :focus {
+  color: var(--accent-text-color);
 }
 .header-contacts :hover,
 .header-contacts :focus {
@@ -159,6 +163,34 @@ button :focus {
   background-color: var(--title-text-color);
 }
 /*текст приимущества*/
+.text::before {
+  display: block;
+  content: "";
+  height: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+}
+.icon-antena::before {
+  background-image: url(../img/antenna.svg);
+  background-size: 70px;
+  padding-top: 28px;
+  padding-bottom: 22px;
+  padding-left: 89px;
+  padding-right: 111px;
+}
+.icon-clock::before{
+  background-image: url(../img/clock.svg);
+  background-size: 70px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 25px;
+  padding-bottom: 22px;
+
+}
+
+
 .post-benefits {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -174,6 +206,7 @@ button :focus {
   text-transform: uppercase;
   color: var(--title-text-color);
   padding-bottom: 10px;
+  padding-top: 33px;
 }
 .post-text {
   font-family: Roboto;
